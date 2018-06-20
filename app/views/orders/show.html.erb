@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pizza:</strong>
+<br>
+  <%="Nombre: " + @order.pizza.name %>
+<br>
+  <%= "Recipe: " + @order.pizza.recipe.title %>
+ <br>
+ <%= "Value:" %> <%=@order.pizza.crust.value + @order.pizza.recipe.value %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+<br>
+  <%="Client: " + @order.info.name + " " +@order.info.last_name %>
+<br>
+  <%="Address: " + @order.info.address %>
+<br>
+  <%= "Phone number:" %> <%=@order.info.phone %>
+
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

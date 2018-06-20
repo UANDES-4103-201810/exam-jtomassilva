@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pizza.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pizza.description %>
+</p>
+
+<p>
+  <strong>Pizza value:</strong>
+  <%= @pizza.recipe.value + @pizza.crust.value  %>
+</p>
+
+
+<p>
+  <strong>Crust:</strong>
+  <%= @pizza.crust.name %>
+</p>
+<p>
+  <strong>Crust value:</strong>
+  <%= @pizza.crust.value %>
+</p>
+<p>
+  <strong>Recipe:</strong>
+  <%= @pizza.recipe.title %>
+
+</p>
+<p>
+  <strong>Recipe value:</strong>
+  <%= @pizza.recipe.value %>
+</p>
+<p>
+  <strong>Ingredient 1:</strong>
+  <%= @pizza.recipe.ingredient1.name %>
+</p>
+<p>
+  <strong>Ingredient 2:</strong>
+  <%= @pizza.recipe.ingredient2.name %>
+</p>
+<p>
+  <strong>Ingredient 3:</strong>
+  <%= @pizza.recipe.ingredient3.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_pizza_path(@pizza) %> |
+<%= link_to 'Back', pizzas_path %>
